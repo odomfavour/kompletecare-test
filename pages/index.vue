@@ -4,10 +4,10 @@
     <p class="text-mild">
       Click the tabs to view and edit patient medical details
     </p>
-    <b-card class="px-5 my-5">
+    <b-card class="px-2 px-md-5 px-lg-5 my-5">
       <h5 class="mt-4 text-primary">X-Ray</h5>
       <div class="row">
-        <div class="col-lg-3 mb-3" v-for="(sign, index) in 18" :key="index">
+        <div class="col-lg-3 col-md-4 col-12 mb-3" v-for="(sign, index) in 18" :key="index">
           <b-form-checkbox
             id="checkbox-1"
             :name="`checkbox-${index}`"
@@ -20,7 +20,7 @@
       <hr />
       <h5 class="mt-4 text-primary">Ultrasound Scan</h5>
       <div class="row">
-        <div class="col-lg-3 mb-3" v-for="(sign, index) in 6" :key="index">
+        <div class="col-lg-3 col-md-4 col-12 mb-3" v-for="(sign, index) in 6" :key="index">
           <b-form-checkbox
             id="checkbox-1"
             :name="`checkbox-${index}`"

@@ -81,7 +81,9 @@
     <div class="main-section">
       <div class="top-nav">
         <b-navbar toggleable="lg" fixed="top" variant="light">
-          <button class="btn btn-white toggle-btn" @click="toggleSidebar">click</button>
+          <button class="btn btn-white toggle-btn" @click="toggleSidebar">
+               <b-icon icon="arrow-right-square" variant="primary"></b-icon>
+          </button>
 
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -138,7 +140,6 @@ main {
   padding: 20px 0;
   background: #fff;
   position: fixed;
-  display: none;
 }
 
 .sidebar-inner {
@@ -224,6 +225,29 @@ main {
 
 .main-section .content-section {
   padding-top: 100px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .main-section, .main-section nav {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .sidebar-open .sidebar {
+        z-index: 1500;
+    }
+
+    .sidebar-inner .close-btn, .toggle-btn {
+        display: block;
+    }
 }
 
 @media (max-width: 425px) {
